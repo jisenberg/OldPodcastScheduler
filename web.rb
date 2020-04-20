@@ -10,7 +10,7 @@ end
 
 post '/parse-rss' do
   result = ""
-  items = Nokogiri::XML.fragment "<item>Item1</item><item>Item2</item>"
+  items = Nokogiri::XML.fragment "<item>Item1</item><item>Item3</item>"
   url = params[:url]
   feed = Nokogiri::XML(open(url))
   feed.xpath("//item").remove
